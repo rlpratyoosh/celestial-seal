@@ -1,0 +1,27 @@
+{
+    "name": "@repo/types",
+    "version": "0.0.1",
+    "description": "Shared TypeScript types for the monorepo",
+    "author": "Repo Contributors",
+    "private": true,
+    "license": "MIT",
+    "main": "./dist/index.d.ts",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.d.ts",
+            "require": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc --emitDeclarationOnly --declaration --outDir dist",
+        "clean": "rm -rf dist"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.2"
+    }
+}
