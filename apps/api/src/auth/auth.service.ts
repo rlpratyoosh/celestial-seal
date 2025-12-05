@@ -204,7 +204,7 @@ export class AuthService {
     if (tokenId)
       await this.prisma.refreshToken.delete({
         where: { id: tokenId },
-      });
+      }); 
     ``;
   }
 
